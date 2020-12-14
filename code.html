@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://fleeuestc.numbguy.top/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>平安成电智慧通行</title>
+  </head>
+
+  
+<body>
+  <script type="text/javascript" src="./files/code.js"></script>
+
+    <div class="qrcodesquare">
+      <div class="title">
+        <h2>行人二维码</h2>
+      </div>
+      <div class="qrcode">
+        <img src=./files/qrcode.png>
+      </div>
+      <div class="valid_time" id="valid_time_val">
+        二维码有效时间300秒
+      </div>
+      <div class="div_goto_rule">
+          <button id="goto_rule"  onclick="gotorule()" style="color: white; background-color: #00c4a4;border-radius: 2px;border: none;">
+            <div class="goto_rule_content">
+              <span id="goto_rule_word">查看通行规则</span>
+            </div>
+          </button>
+      </div>
+  </div>
+  
+  
+</body>
+</html>
+
+
+
+<style>
+html,body{
+  padding: 4px;
+}
+
+
+.qrcodesquare{
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.1);
+  min-height: 313.6px;
+  padding: 8px;
+}
+
+.title{
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.qrcode{
+  width: 100%;
+  height: 200px;
+  margin-top: 0px;
+}
+
+.qrcode img{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left:50%;
+  margin-left: -100px;
+}
+
+.valid_time{
+  text-align: center;
+  font-size: 14px;
+  margin: 8px;
+}
+
+.div_goto_rule{
+  text-align: center;
+}
+
+#goto_rule{
+  width:116px;
+  height: 36px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+</style>
