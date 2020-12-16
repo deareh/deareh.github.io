@@ -2,6 +2,8 @@
 //获取应用实例
 //const app = getApp()
 //var util = require('utils/util.js');
+
+var y=1;
 function disableElement() {
 console.log("test");
 }
@@ -25,6 +27,28 @@ userInfo: {},
 hasUserInfo: false,
 //canIUse: wx.canIUse('button.open-type.getUserInfo')
 };
+function namechange0() {
+
+if (y==1){
+
+				 document.getElementById("username1").innerHTML="王铁霖";
+				 y=y+1;
+}
+else if (y==2){
+				 document.getElementById("username1").innerHTML="曾羽 ";
+				 y=y+1;
+}
+else if (y==3){
+				 document.getElementById("username1").innerHTML="叶香麟 ";
+	 y=y+1;
+}
+else if (y==4){
+				 document.getElementById("username1").innerHTML="廖长春 ";
+	 y=1;
+}
+}
+
+
 function radiochange() {
                 var x = document.getElementById("auth");
         if(x.innerHTML == "研究生用户，出校登记成功！"){
@@ -37,6 +61,9 @@ function radiochange() {
   }
         
 }
+
+
+
 function radiochangeslt(){
         var x = parseInt(document.getElementById("slt").options[document.getElementById("slt").options.selectedIndex].value);
         if(x == 1){
@@ -65,9 +92,7 @@ document.getElementById("auth").innerHTML="本科生用户，入校授权有效�
 
 
 
-function namechange() {
-document.getElementById("user-right").innerHTML = document.getElementById("custom-name-input").value
-}
+
 
 
 $("#infoselected").click(function(){
