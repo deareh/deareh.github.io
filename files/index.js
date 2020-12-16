@@ -44,6 +44,10 @@ else if (y==3){
 }
 else if (y==4){
 				 document.getElementById("username1").innerHTML="廖长春 ";
+	 y=y+1;
+}
+else if (y==5){
+				 document.getElementById("username1").innerHTML="刘相渝 ";
 	 y=1;
 }
 }
