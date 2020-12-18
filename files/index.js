@@ -151,14 +151,26 @@ function gotocode(){
         var minute = format(date.getMinutes());
         var second = format(date.getSeconds());
         var dis_date = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-        var show_date = dis_date + "  " + dis_date;
+var show_date=dis_date + "  ";
+for (var jj=0; jj<10; jj++)
+{
+     show_date = show_date + show_date;
+}
+
         document.getElementById("time").innerHTML = show_date;
     }
-
-     setTimeout(time,1);
-
+     setTimeout("time()",1);
 
 
+
+
+
+
+
+
+
+
+     
 //事件处理函数
 function bindViewTap() {
 wx.navigateTo({
