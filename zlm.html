@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://fleeuestc.numbguy.top/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>平安成电智慧通行</title>
+</head>
+
+
+<body style="">
+  <!--index.wxml-->
+  <!-- <input type="text" value="1017594942@qq.com" />
+  <button onclick="disableElement()">禁用</button>
+  <button onclick="radiochange()">test</button> -->
+
+  
+
+
+
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+      获取头像昵称 
+      </button> -->
+      <block>
+        <div class="usermotto">
+          <!-- <text class="user-motto">{{motto}}</text> -->
+          <text class="auth" id="auth">研究生用户，入校授权有效！</text>
+        </div>
+        <!-- <div class="divLine"></div> -->
+        <hr color="#E0E3DA" size="0.5">
+
+        <div class="table">
+          <block>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./files/user.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="user-left">用户姓名</div>
+              </div>   <div class="td-mid2">         </div>
+              <div class="td-right"  >
+                <div id="user-right" class="user-right">
+                  <h2 id="username" style="font-size: 22px;font-weight: bold;font-family: Roboto;"><text id="username1" ondblclick="namechange0()">张琳曼</text></h2>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./files/register.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="register-left">登记类型</div>   
+              </div>   <div class="td-mid2">         </div>
+              <div class="td-right">
+                <div class="register-right">
+                  <h2 id="registertype" style="font-size: 22px;font-weight: bold;font-family: Roboto;">研究生（硕士）</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./files/time.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="time-left">登记时间</div>
+              </div>
+
+
+   <div class="td-mid2">         </div>
+              <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
+              <div class="td-right">
+                <!-- <div class="scrolltxt">
+                  <div class="marquee_box">
+                    <div class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+                      <text>{{text}}</text>
+                      <text style="margin-right:{{marquee_margin}}px;"></text>
+                      <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
+                    </div>
+                  </div>
+                </div> -->
+                <marquee scrollamount="3" >
+                  <div id="time" behavior="scroll" style="font-family: Roboto;font-weight: bolder;font-size: 17px;color: #00c4a4 ;" >
+                    2020-12-13 11:16:29</div>
+                  <!--div id="timecpy" style="font-family: Roboto;font-weight: bolder;font-size: 18.72px;color: #00c4a4 ;">
+                    2020-12-13 11:16:29</div-->
+                  
+                </marquee>
+              </div>
+            </div>
+          </block>
+        </div>
+
+        <div class="codelogo">
+          <div class="code">
+            <button id="gotocode"  onclick="gotocode()"  style="color: white; background-color: #00c4a4;border-radius: 2px;border: none;">
+              <div class="goto_btn_content">
+                <span id="goto_word">前往个人二维码</span>
+              </div>
+            </button>
+          </div>
+          <div class="logo" ondblclick="radiochange()">
+            <img src=./files/logo.jpeg>
+          </div>
+                   
+        </div>
+      </block>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<script src="./files/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="utils/util.js"></script> -->
+<script type="text/javascript" src="./files/index.js"></script>
+
+
+
+<style>
+  /**index.wxss**/
+  .custom-name {
+    display: flex;
+  }
+
+  .custom-name-input {
+    background-color: teal;
+  }
+
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+
+  .userinfo-nickname {
+    color: #aaa;
+  }
+
+  .usermotto {
+    /* flex: center; */
+    margin-top: 55px;
+    margin-bottom: 40px;
+    font-size: 22px;
+
+  }
+
+  .auth {
+    color: #008900;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .divLine {
+    background: #E0E3DA;
+    width: 100%;
+    height: 3rpx;
+  }
+
+  .icon {
+    /* display:flex;  */
+    /* display: contents;                   */
+    justify-content: center;
+    /* flex-grow: 1; */
+
+    /* margin-left: 5px; */
+  }
+
+  .icon image {
+    width: 25px;
+    height: 25px;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+  }
+
+  .user-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+    flex-grow: 2;
+
+
+  }
+
+  .user-right {
+    font-family: "Roboto";
+    color: #000;
+    font-size: 24px;
+    align-items: right
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .register {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+  }
+
+  .register-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+  }
+
+  .register-right {
+    font-family: "黑体";
+    color: #000;
+    font-size: 25px;
+    align-items: right;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+  }
+
+  .timecpy{
+    float: left;
+  }
+
+  .time-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+
+  }
+
+  .time-right {
+    font-family: "黑体";
+    color: #00c4a4 ;
+    /* font-size: 60rpx; */
+    font-size: 24px;
+
+    align-items: right;
+    font-weight: bold;
+  }
+
+  /* 09B094 */
+
+
+
+
+  /*table*/
+  .table {
+    width: 100%;
+    border: 0px solid darkgray;
+  }
+
+  .tr {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 2.8rem;
+    align-items:center;
+  }
+
+  .td-left {
+    width: 5%;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .td-mid {
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .td-mid2 {
+    width: 10%;
+    justify-content: center;
+    text-align: center;
+  }
+  .td-right {
+    width: 55%;
+    justify-content: center;
+    text-align: right;
+    overflow: hidden;
+
+  }
+
+
+
+  .scrolltxt {
+    padding: 0 20rpx;
+    background: transparent;
+  }
+
+  .marquee_box {
+    position: relative;
+    font-size: 80rpx;
+    color: #09B094;
+    font-weight: bold;
+    height: 90rpx;
+    display: block;
+    overflow: hidden;
+  }
+
+  .marquee_text {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    height: 90rpx;
+    line-height: 90rpx;
+  }
+
+
+  .codelogo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .code{
+    width:130px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+  }
+
+  #gotocode{
+    width:130px;
+    height: 32px;
+    margin-top: 10px;
+
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+
+  .logo img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+    margin: 70px;
+    left: 50%;
+    margin-left: -25px;
+  }
+
+</style>
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
