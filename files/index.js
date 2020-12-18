@@ -48,8 +48,13 @@ else if (y==4){
 }
 else if (y==5){
 				 document.getElementById("username1").innerHTML="刘相渝 ";
+	 y=y+1;
+}
+else if (y==6){
+				 document.getElementById("username1").innerHTML="邓志颖 ";
 	 y=1;
 }
+
 }
 
 
