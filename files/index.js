@@ -31,7 +31,7 @@ function namechange0() {
 
 if (y==1){
 
-				 document.getElementById("username1").innerHTML="王铁霖";
+				 document.getElementById("username1").innerHTML="张雨";
 				 y=y+1;
 }
 else if (y==2){
